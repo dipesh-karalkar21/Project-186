@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-spe-particles-component@^1.0.4/dist/aframe-spe-particles-component.min.js"></script>
+
+    <script src="./effect.js"></script>
+
+</head>
+
+<body>
+    <a-scene bb>
+        <a-sky color="black" radius="10000" id="sky" ></a-sky>
+        <a-sphere id="sin" color="white" radius="0.1" position = "0 0 -12"></a-sphere>
+        <a-entity id="msg" text="value:Your are at the very moment of creation of the universe, press Enter/space to start the Big Bang ; color:white;size:10" position = "0 2 -1" ></a-entity>
+        <a-entity id="bb" position = "0 0 -10" spe-particles="
+            color:white,lightblue,blue,black;
+            distribution:sphere;
+            randomize-velocity:true;
+            radius:1;
+            particle-count:0;
+            velocity:1;
+            velocity-spread:100;
+            drag:0;
+            max-age:10;
+            duration:1;
+            blending:additive;
+            active-multiplier:10000;
+            size:1,1,2,0;
+            " >
+            
+        </a-entity>
+    </a-scene>
+</body>
+</html>
